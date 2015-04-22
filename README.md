@@ -341,3 +341,189 @@ label颜色一致；但是你也可以使用placeholder-icon去修改成占位�
   </button>
 </div>
 ```
+
+##Toggle
+跟Html中的复选框切换都一样，除了看起不同。可以很容易的放在触摸设备上。Ionic
+更喜欢在input外部放一个Label为了更好的切或者拖动；  
+Toggle也能设计颜色，可以使用toggle-assertive
+```
+<label class="toggle">
+   <input type="checkbox">
+   <div class="track">
+     <div class="handle"></div>
+   </div>
+</label>
+```
+
+##Checkbox
+Checkbox跟Html里面的checkbox有一点不同，除了样式上的不同。
+item-checkbox被加在item后面；Ionic喜欢做label里面加如checkbox，那样更有助于选中。  
+它也是可以设置颜色的，需要使用checkbox-assertive
+```
+<ul class="list">
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Flux Capacitor
+  </li>
+</ul>
+```
+##Radio Button List
+单选按钮其实跟原生的并没有什么不同，每一个item-radio下的input里面必须有一个相同的
+name  
+radio-icon可以用来指定标识显示或者隐藏的元素。
+```
+<div class="list">
+  <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+      Go
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+</div>
+```
+##Range
+Range是一个范围；range的主题可以是任意的一个ionic颜色。可以使用各种各样的元素，
+列表项目或者卡片；
+```
+<div class="range">
+  <i class="icon ion-volume-low"></i>
+  <input type="range" name="volume">
+  <i class="icon ion-volume-high"></i>
+</div>
+
+<div class="list">
+  <div class="item range range-positive">
+    <i class="icon ion-ios7-sunny-outline"></i>
+    <input type="range" name="volume" min="0" max="100" value="33">
+    <i class="icon ion-ios7-sunny"></i>
+  </div>
+</div>
+```
+##Select
+Ionic的多选相比比浏览器漂亮些，是根据浏览器选择的。默认的行为还是根据浏览器有关。
+不同平台展示效果是不同的，例如：桌面浏览器就是一个向下的弹出框。安卓有一组单选的按钮组
+ios将出现一个照片卷轴一样的覆盖半个屏幕。
+```
+<div class="list">
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Lightsaber
+    </div>
+    <select>
+      <option>Blue</option>
+      <option selected>Green</option>
+      <option>Red</option>
+    </select>
+  </label>
+</div>
+```
+##Tabs
+Tabs是一组水平的按钮或链接,在各浏览器都有一致的体验。它可以包含文本和图标。使得
+在移动端是非常浏览的导航；元素应该包含一个tabs,每一个tab都将包含一个tab-item默认
+没有图标只有一个文本；Tabs可以匹配标准的ionic颜色。  
+如果tabbar隐藏了，还显示内容。可以添加一个tabs-item-hide类。或者当你使用的时候记得加
+has-tabs类。
+```
+<div class="tabs">
+  <a class="tab-item">
+    Home
+  </a>
+  <a class="tab-item">
+    Favorites
+  </a>
+  <a class="tab-item">
+    Settings
+  </a>
+</div>
+```
+##Ioon-only Tabs
+在tabs后添加tabs-icon-only类
+```
+<div class="tabs tabs-icon-only">
+  <a class="tab-item">
+    <i class="icon ion-home"></i>
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-star"></i>
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-gear-a"></i>
+  </a>
+</div>
+```
+##Top Icon Tabs
+在tabs添加tabs-icon-top类
+```
+<div class="tabs tabs-icon-top">
+  <a class="tab-item">
+    <i class="icon ion-home"></i>
+    Home
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-star"></i>
+    Favorites
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-gear-a"></i>
+    Settings
+  </a>
+</div>
+```
+##Left Icon Tabs
+在tabs后添加tabs-icon-left
+```
+<div class="tabs tabs-icon-left">
+  <a class="tab-item">
+    <i class="icon ion-home"></i>
+    Home
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-star"></i>
+    Favorites
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-gear-a"></i>
+    Settings
+  </a>
+</div>
+```
+##Striped Style Tabs
+在tabs上添加tabs-striped具有安卓风格，tabs-top定位做顶部。获取angular   Striped tabs
+颜色用tabs-background-{color}，tabs-color-{color}这个时候要添加has-tabs-top类。
+```
+<div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+    <div class="tabs">
+      <a class="tab-item active" href="#">
+        <i class="icon ion-home"></i>
+        Test
+      </a>
+      <a class="tab-item" href="#">
+        <i class="icon ion-star"></i>
+        Favorites
+      </a>
+      <a class="tab-item" href="#">
+        <i class="icon ion-gear-a"></i>
+        Settings
+      </a>
+    </div>
+  </div>
+  <div class="tabs-striped tabs-color-assertive">
+    <div class="tabs">
+      <a class="tab-item active" href="#">
+        <i class="icon ion-home"></i>
+        Test
+      </a>
+      <a class="tab-item" href="#">
+        <i class="icon ion-star"></i>
+        Favorites
+      </a>
+      <a class="tab-item" href="#">
+        <i class="icon ion-gear-a"></i>
+        Settings
+      </a>
+    </div>
+  </div>
+  ```
