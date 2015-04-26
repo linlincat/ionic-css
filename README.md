@@ -527,3 +527,335 @@ has-tabs类。
     </div>
   </div>
   ```
+##Toggle
+和HTML中的复选框切换都一样，除了看起来不一样。做触摸设备上很容易使用。 
+在label中使用会更好的切换Toggle；  
+也可以分配颜色给它们，如toggle-assertive；也可以做为多列表，将item-toggle
+放在没一个Item里面；
+```
+<ul class="list">
+  <li class="item item-toggle">
+     HTML5
+     <label class="toggle toggle-assertive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+</ul>
+```
+##Checkbox
+它和HTML中的并没有什么不同，除了样式看起来不同。可以做一个checkboxes多列~~在
+每一个item中放入一个item-checkbox；  
+ionic提供了<label>，这样使用它更容易。checkboxes也可以分配颜色给他们。如加入checkbox-assertive；
+```
+<ul class="list">
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Flux Capacitor
+  </li>
+</ul>
+```
+##Radio Button List
+单选按钮跟标准的单选按钮并没有什么不同，除了样式上有所不同。
+每一个item-radio不得不有一个相同的Name属性；radio-icon也是可以被指派的。去 
+显示或者隐藏一个图标元素；ionic提供<label>使得用起来更容易，可以做全屏上触摸；
+```
+<div class="list">
+  <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+      Go
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+</div>
+```
+##Range
+这是一个值域,颜色可以定义为任何默认的Ionic颜色；可以使用多种元素，如列表或者卡片；
+```
+<div class="range">
+  <i class="icon ion-volume-low"></i>
+  <input type="range" name="volume">
+  <i class="icon ion-volume-high"></i>
+</div>
+
+<div class="list">
+  <div class="item range range-positive">
+    <i class="icon ion-ios7-sunny-outline"></i>
+    <input type="range" name="volume" min="0" max="100" value="33">
+    <i class="icon ion-ios7-sunny"></i>
+  </div>
+</div>
+```
+##Select
+Ionic的多选相比，比浏览器漂亮些；当选择开始时，默认行为如何选择其中一个选项仍然是由
+浏览器。用户选择一个选项，每个平台的用户界面会有所不同。做桌面浏览器显示默认下
+拉框，Android会有单选框列表弹出，Ios有自定义照片卷轴窗口遮盖窗口的下半部；
+```
+<div class="list">
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Lightsaber
+    </div>
+    <select>
+      <option>Blue</option>
+      <option selected>Green</option>
+      <option>Red</option>
+    </select>
+  </label>
+</div>
+```
+##Tabs
+一组水平组合的按钮或者链接，它能包含任何组成部分，做移动端很受欢迎的导航！
+包含元素有一个tabs类名，每个tab都有一个tab-item类名。默认没有图标仅仅是文本；
+一样是可以有多种颜色可以进行更改；  
+隐藏tabbar但仍然显示内容，添加tabs-item-hide类；  
+当然如果你使用tabs也可以加has-tabs类。
+```
+<div class="tabs">
+  <a class="tab-item">
+    Home
+  </a>
+  <a class="tab-item">
+    Favorites
+  </a>
+  <a class="tab-item">
+    Settings
+  </a>
+</div>
+```
+##Icon-only
+在tabs后加tabs-icon-only
+```
+<div class="tabs tabs-icon-only">
+  <a class="tab-item">
+    <i class="icon ion-home"></i>
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-star"></i>
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-gear-a"></i>
+  </a>
+</div>
+```
+##Top Icon Tabs
+添加tabs-icon-top在tabs
+```
+<div class="tabs tabs-icon-top">
+  <a class="tab-item">
+    <i class="icon ion-home"></i>
+    Home
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-star"></i>
+    Favorites
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-gear-a"></i>
+    Settings
+  </a>
+</div>
+```
+##Left Icon Tabs
+在tabs后添加tabs-icon-left
+```
+<div class="tabs tabs-icon-left">
+  <a class="tab-item">
+    <i class="icon ion-home"></i>
+    Home
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-star"></i>
+    Favorites
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-gear-a"></i>
+    Settings
+  </a>
+</div>
+```
+##Striped Style
+在tabs外有一个tabs-striped，可做出Android风格。加Tabs-top可以定位top，可控制颜色；
+tabs-background-{color}控制背景色，tabs-color-{color} 控制字体颜色；  
+顶部tabs与头部混合，需要使用has-tabs-top类名；
+```
+<div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+    <div class="tabs">
+      <a class="tab-item active" href="#">
+        <i class="icon ion-home"></i>
+        Test
+      </a>
+      <a class="tab-item" href="#">
+        <i class="icon ion-star"></i>
+        Favorites
+      </a>
+      <a class="tab-item" href="#">
+        <i class="icon ion-gear-a"></i>
+        Settings
+      </a>
+    </div>
+</div>
+<div class="tabs-striped tabs-color-assertive">
+    <div class="tabs">
+      <a class="tab-item active" href="#">
+        <i class="icon ion-home"></i>
+        Test
+      </a>
+      <a class="tab-item" href="#">
+        <i class="icon ion-star"></i>
+        Favorites
+      </a>
+      <a class="tab-item" href="#">
+        <i class="icon ion-gear-a"></i>
+        Settings
+      </a>
+    </div>
+</div>
+```
+##Grid
+Ionic网格系统不大相同，因为它是用 CSS Flexible Box Layout Module标准；优势在于支持
+Ionic的设备都支持 flexbox；  
+简单的添加行与列：它们会均匀的占用可用空间。如果你想建立一个三行就三行，五列就五列；
+这里不限制使用那个12网格。或者不需要明确状态。你可以垂直的对齐做每一列的内容；
+使用row惊醒指定，去支持一行。使用col去指定一列。想怎么加就怎么加，不用多想，它会自动编译的；
+##Grid：Evenly Spaced Columns
+默认做col里面添加row将会自动获取等量的间距，在样式内部不指定任何的大小；
+##Grid:Explicit Column Sizes
+你可以明确一个单元格的大小，如何你想指定某个单元格比其他它的大想同一行里。默认的是
+他们都会有相同的指定有效空间。Ionic使用的网格系统是百分比（相比一个锁定12列网格）
+这种网格系统的优势是，你仅仅做你需要的地方设置百分百。其它的仍然可以分割剩余的空间；
+```
+<div class="row">
+  <div class="col col-50">.col.col-50</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+</div>
+
+<div class="row">
+  <div class="col col-75">.col.col-75</div>
+  <div class="col">.col</div>
+</div>
+
+<div class="row">
+  <div class="col">.col</div>
+  <div class="col col-75">.col.col-75</div>
+</div>
+
+<div class="row">
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+</div>
+```
+Explicit Column Percentage Classnames
+
+* .col-10   10%
+
+* .col-20 	20%
+
+* .col-25 	25%
+
+* .col-33 	33.3333%
+
+* .col-50 	50%
+
+* .col-67 	66.6666%
+
+* .col-75 	75%
+ 
+* .col-80 	80%
+
+*.col-90 	90%
+
+##Grid: Offset Columns
+单元格可以从左侧开始偏；
+```
+<div class="row">
+  <div class="col col-33 col-offset-33">.col</div>
+  <div class="col">.col</div>
+</div>
+
+<div class="row">
+  <div class="col col-33">.col</div>
+  <div class="col col-33 col-offset-33">.col</div>
+</div>
+
+<div class="row">
+  <div class="col col-33 col-offset-67">.col</div>
+</div>
+```
+Offset Column Percentage Classnames 
+
+* .col-offset-10 10%
+
+* .col-offset-20 	20%
+
+* .col-offset-25 	25%
+
+* .col-offset-33 	33.3333%
+
+* .col-offset-50 	50%
+
+* .col-offset-67 	66.6666%
+
+* .col-offset-75 	75%
+
+* .col-offset-80 	80%
+
+* .col-offset-90 	90%
+
+##Grid: Vertically Align Columns
+另一个技巧flexbox的套筒是能够轻易列垂直对齐,对齐包括上、中、下。可以应用的每一行的一列，
+或者特定的一列。
+```
+<div class="row">
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">1<br>2<br>3<br>4</div>
+</div>
+
+<div class="row">
+  <div class="col col-top">.col</div>
+  <div class="col col-center">.col</div>
+  <div class="col col-bottom">.col</div>
+  <div class="col">1<br>2<br>3<br>4</div>
+</div>
+
+<div class="row row-top">
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">1<br>2<br>3<br>4</div>
+</div>
+
+<div class="row row-center">
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">1<br>2<br>3<br>4</div>
+</div>
+
+<div class="row row-bottom">
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">1<br>2<br>3<br>4</div>
+</div>
+```
+##Responsive Grid
+或许可能出这样的现象，执行一行将不会非常适合到可选的区域；相应类可以在一行里应用；
+例如：你想将一行栏做成堆栈的，当试图非常小可以使用.responsive-sm类。  
+进一步配置，每个类使用sass变量。可根据你的喜欢改变。可以使用responsive-grid-break混入类
+来创建自己的类；
+Responsive Class     Break when roughly
+
+* .responsive-sm 	Smaller than landscape phone
+
+* .responsive-md 	Smaller than portrait tablet
+
+* .responsive-lg 	Smaller than landscape tablet
