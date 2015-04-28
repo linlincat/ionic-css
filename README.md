@@ -491,8 +491,9 @@ has-tabs类。
 </div>
 ```
 ##Striped Style Tabs
-在tabs上添加tabs-striped具有安卓风格，tabs-top定位做顶部。获取angular   Striped tabs
-颜色用tabs-background-{color}，tabs-color-{color}这个时候要添加has-tabs-top类。
+在tabs上添加tabs-striped具有安卓风格，也可以使用类名tabs-top定位做顶部。获取angular   Striped tabs
+背景颜色用tabs-background-{color}，字体颜色tabs-color-{color}
+它于头部怕混合使用，这个时候要添加has-tabs-top类。以流出头部间距。
 ```
 <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
     <div class="tabs">
